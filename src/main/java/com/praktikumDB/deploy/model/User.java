@@ -8,6 +8,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.apache.tomcat.util.net.openssl.OpenSSLStatus;
 
 @Entity
 @Data
@@ -22,4 +23,8 @@ public class User {
     private String name;
     @Column(nullable = false, unique = true)
     private String nim;
+
+    public void setName(User request, OpenSSLStatus.Name name) {
+
+    }
 }
